@@ -8,6 +8,7 @@ For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 a
 Evaluate the sum of all the amicable numbers under 10000.
 '''
 from math import sqrt
+import time
 
 def sumOfFactors(num):
     sum = 1
@@ -22,7 +23,7 @@ dList = [0,0]
 for i in range(2, 10001):
     dFunc = sumOfFactors(i)
     dList.append(dFunc)
-
+ 
 sum = 0
 for index,value in enumerate(dList):
     if value != 0 and value < len(dList) and value != index:
