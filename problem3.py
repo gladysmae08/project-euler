@@ -1,5 +1,8 @@
 # find largest prime factor of 600851475143
 import math
+from timeit import default_timer
+
+start = default_timer()
 target = 600851475143
 ints = [ i for i in range(2, int(math.sqrt(target))) ]
 primes = []
@@ -15,4 +18,5 @@ for i in range(len(primes)-1, 0, -1):
     if target%primes[i] == 0:
         print(primes[i])
         break
-        
+stop = default_timer()
+print("time: ", stop-start)

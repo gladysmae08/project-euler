@@ -2,7 +2,7 @@
 #include <iostream>
 #include <chrono>
 
-static bool isPalindrome(int const num){
+static bool isPalindrome(int const &num){
     std::string numstr = std::to_string(num);
     for(std::string::iterator i = numstr.begin(), j = numstr.end()-1; i <= j; i++,j--){
         if (*i != *j) return false;
